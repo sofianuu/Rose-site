@@ -27,7 +27,7 @@ function Nav({isOpen, toggleMenu}) {
             <Link 
               onClick={toggleMenu} 
               to={item.slug} 
-              className="flex items-center gap-3 hover:text-black transition-colors duration-200 text-lg md:text-base"
+              className="flex items-center gap-3 hover:scale-110  hover:text-black transition-colors duration-200 text-lg md:text-base"
             >
               <span className="md:hidden">{item.component}</span> 
               <span className="md:hidden">{item.text}</span>

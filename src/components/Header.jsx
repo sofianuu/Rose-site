@@ -31,8 +31,7 @@ function Header() {
         <>
             <header className="flex items-center justify-between px-4 md:px-10 h-20 fixed top-0 left-0 right-0 z-50 bg-white text-gray-600 ">
                 <Logo closeMenu={closeMenu}/>
-                
-                {/* Nav-ul este afișat direct pentru desktop, pentru mobil este parte din overlay */}
+            
                 <div className="hidden md:block">
                     <Nav isOpen={isOpen} toggleMenu={toggleMenu} />
                 </div>
@@ -58,7 +57,7 @@ function Header() {
                 </div>
             </header>
             
-            {/* Meniul fullscreen pentru mobil */}
+
             {isOpen && (
                 <div className="fixed inset-0 bg-white z-40 pt-20 md:hidden flex flex-col">
                     <div className="flex-1 overflow-y-auto">
@@ -67,7 +66,6 @@ function Header() {
                 </div>
             )}
             
-            {/* Adăugăm un div gol pentru a menține spațiul ocupat de header-ul fixed */}
             <div className="h-20"></div>
         </>
     );

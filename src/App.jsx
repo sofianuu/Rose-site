@@ -8,10 +8,10 @@ import Profile from './components/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Search from './components/Search';
-import Women from './components/Women';
-import Men from  './components/Men';
 import Kids from './components/Kids';
-
+import CategoryPage from './components/CategoryPage';
+import ProductPage from './components/ProductPage';
+import GenderHome from './components/GenderHome';
 
 function App() {
   
@@ -26,11 +26,12 @@ function App() {
             <Route path="/cart" element={<Cart/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/search" element={<Search/>}/>
-            <Route path="/women" element={<Women/>}/>
-            <Route path="/men" element={<Men/>}/>
             <Route path="/kids" element={<Kids/>}/>
+            <Route path="/women" element={<GenderHome gender="women" />} />
+            <Route path="/men" element={<GenderHome gender="men" />} />
+            <Route path="/:gender/:category" element={<CategoryPage />} />
+            <Route path="/product/:productId" element={<ProductPage />} />
            
-
 
           </Routes>
         </main>
