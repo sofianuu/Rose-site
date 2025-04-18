@@ -59,18 +59,18 @@ function Slideshow() {
   };
 
   return (
-    <div className="overflow-hidden relative w-11/12 max-h-[500px] sm:max-h-[700px] mx-auto">
+    <div className="overflow-hidden relative w-11/12 max-h-[800px] sm:max-h-[700px] mx-auto">
       <div 
         className="flex transition-transform ease-out items-center duration-500"
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="relative w-full flex-shrink-0 max-h-[500px]">
+          <div key={index} className="relative w-full flex-shrink-0 max-h-[600px]">
             <Link to={slide.link} className="block w-full h-full relative">
               <img 
                 src={isMobile ? slide.mobileImage : slide.desktopImage} 
                 alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover max-h-[500px] transition-transform duration-700"
+                className="w-full h-full object-cover max-h-[530px] transition-transform duration-700"
               />
               <div className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 w-full text-center transition-all duration-300">
                 <h2 className="text-white font-bold text-6xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl px-4 drop-shadow-lg">
